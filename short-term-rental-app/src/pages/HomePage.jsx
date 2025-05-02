@@ -21,6 +21,10 @@ function HomePage() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white">
+      <div className="absolute top-4 left-4 flex space-x-4">
+        <a href="/" className="px-4 py-2 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200">Home</a>
+        <a href="/contact" className="px-4 py-2 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200">Contact Us</a>
+      </div>
       <h1 className="text-5xl font-bold mb-6">Welcome to Paradise Luxe Homes</h1>
       <p className="text-xl mb-8 text-center max-w-2xl">
         Experience luxury and comfort in our exclusive short-term rental property. Escape to your tropical paradise today!
