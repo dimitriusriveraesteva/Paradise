@@ -33,7 +33,12 @@ function HomePage() {
       </p>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
         {images.map((image, index) => (
-          <img key={index} src={image} alt={`Property view ${index + 1}`} className="rounded-lg shadow-md" />
+          <img
+            key={index}
+            src={image}
+            alt={`Property view ${index + 1}`}
+            className="rounded-lg shadow-md object-cover w-full h-48"
+          />
         ))}
       </div>
       <a href="/property" className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200 mt-8">
