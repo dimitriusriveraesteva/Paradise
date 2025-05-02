@@ -39,6 +39,36 @@ function HomePage() {
       <p className="text-xl mb-8 text-center max-w-2xl">
         Experience luxury and comfort in our exclusive short-term rental property. Escape to your tropical paradise today!
       </p>
+      <p className="text-lg mb-4 text-center max-w-2xl">
+        Escape to this beautifully renovated coastal retreat—just 10 minutes from Caspersen and Venice Beach, and only 30 minutes from world-famous Siesta Key Beach! Explore Shamrock Park’s trails, golf, bike, or fish with gear and bikes provided. Unwind at home with a fully stocked kitchen and grill, or discover Venice’s boutiques, galleries, and theaters. State parks and Sarasota gems like the Ringling Museum and Mote Aquarium are a short drive away. Beach gear and towels included!
+      </p>
+      <p className="text-lg mb-4 text-center max-w-2xl">
+        <strong>Main Features:</strong> Private backyard, smart TV w/ streaming services, beach chairs/towels/umbrella, beach wagon, fishing rods, shark tooth hunting gear, bicycles, ceiling fans, walk-in closets, dining table.
+      </p>
+      <p className="text-lg mb-4 text-center max-w-2xl">
+        <strong>Kitchen:</strong> Dishwasher, refrigerator, stove/oven, microwave, toaster, cookware, dual coffee maker, blender, ice maker, water filter, trash bags + paper towels, complimentary spices, garbage disposal.
+      </p>
+      <p className="text-lg mb-4 text-center max-w-2xl">
+        <strong>General:</strong> Free Wi-Fi, iron board, linens/towels, complimentary toiletries (shampoo, conditioner, body soap, lotion, hand soap, etc.), laundry detergent, hair dryer, hangers, keyless entry.
+      </p>
+      <p className="text-lg mb-4 text-center max-w-2xl">
+        <strong>Parking:</strong> 1 car garage with space for up to 2 additional vehicles in driveway.
+      </p>
+      <p className="text-lg mb-4 text-center max-w-2xl">
+        <strong>FAQ:</strong> 1 exterior facing camera (facing out).
+      </p>
+      <p className="text-lg mb-4 text-center max-w-2xl">
+        <strong>Bedrooms:</strong>
+        <ul className="list-disc list-inside">
+          <li>Bedroom 1: King Bed</li>
+          <li>Bedroom 2: Queen Bed</li>
+          <li>Bonus Room/Sunroom: Full Sleeper Sofa</li>
+          <li>Living Room: Queen Sleeper Sofa</li>
+        </ul>
+      </p>
+      <p className="text-lg mb-4 text-center max-w-2xl">
+        <strong>Additional Info:</strong> Washer & Dryer, Central A/C, Outdoor BBQ Grill, Close to Golf Courses, Beaches & Shamrock Park & Nature Center. <strong>SMOKE FREE HOUSE</strong>
+      </p>
       <div className="relative w-full max-w-xl h-48 overflow-hidden rounded-lg shadow-lg">
         <img
           src={images[currentIndex]}
