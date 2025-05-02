@@ -43,52 +43,17 @@ function HomePage() {
         </nav>
       </header>
       <div className="pt-16">
-        <div
-          className="flex flex-col items-center justify-center min-h-screen text-white bg-cover bg-center px-4"
-          style={{ backgroundImage: `url(${HeroImg})` }}
-        >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-black bg-opacity-50 px-4 py-2 rounded-lg text-center">
-            Welcome to Paradise Luxe Homes
-          </h1>
-          <p className="text-lg md:text-xl mb-6 text-center max-w-3xl bg-black bg-opacity-50 px-4 py-2 rounded-lg">
-            Experience luxury and comfort in our exclusive short-term rental property. Escape to your tropical paradise today!
-          </p>
-          <div className="flex space-x-4">
-            <a
-              href="/property"
-              className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700"
-            >
-              View Property Details
-            </a>
-            <a
-              href="https://booking.hospitable.com/widget/fd7f5f40-7ea7-460f-869c-9f830039b194/1261776"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700"
-            >
-              Book Now
-            </a>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center py-12 bg-gray-100">
-          <div className="relative w-full max-w-2xl h-56 overflow-hidden rounded-lg shadow-lg">
-            <img
-              src={images[currentIndex]}
-              alt={`Property view ${currentIndex + 1}`}
-              className="w-full h-full object-cover"
-            />
-            <button
-              onClick={handlePrev}
-              className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-blue-600 font-bold px-3 py-2 rounded-full shadow-md hover:bg-gray-200"
-            >
-              &#8249;
-            </button>
-            <button
-              onClick={handleNext}
-              className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-blue-600 font-bold px-3 py-2 rounded-full shadow-md hover:bg-gray-200"
-            >
-              &#8250;
-            </button>
+        <div className="relative flex items-center justify-center h-screen bg-gray-800">
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="relative z-10 text-center text-white px-4">
+            <h1 className="text-5xl font-extrabold mb-4 drop-shadow-lg">Paradise Luxe Homes</h1>
+            <p className="text-xl mb-6 max-w-xl mx-auto">
+              Your private tropical escape with luxurious amenities and unforgettable comfort.
+            </p>
+            <div className="space-x-4">
+              <a href="/property" className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">View Details</a>
+              <a href="https://booking.hospitable.com/widget/fd7f5f40-7ea7-460f-869c-9f830039b194/1261776" target="_blank" rel="noreferrer" className="px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">Book Now</a>
+            </div>
           </div>
         </div>
         <section className="bg-gray-100 py-12">
