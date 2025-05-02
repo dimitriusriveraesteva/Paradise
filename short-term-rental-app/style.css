@@ -107,6 +107,7 @@ section {
     color: #FFFFFF; /* Ensure text is visible */
     padding: 50px 20px;
     border-radius: 10px;
+    margin-top: 20px; /* Reduce top margin */
     margin-bottom: 20px;
     text-align: center;
 }
@@ -119,6 +120,12 @@ section h2 {
 /* Apply Montserrat font to titled areas */
 h1, h2 {
     font-family: 'Montserrat', sans-serif;
+}
+
+/* Adjust h1 header text size and alignment */
+h1 {
+    font-size: 2.5rem; /* Make the header text smaller */
+    text-align: left; /* Align the header text to the left */
 }
 
 section p {
@@ -203,7 +210,7 @@ section p {
     background-size: cover;
     color: #FFFFFF;
     text-align: center;
-    padding: 150px 20px;
+    padding: 100px 20px; /* Reduce top and bottom padding */
 }
 
 .hero-content h1 {
