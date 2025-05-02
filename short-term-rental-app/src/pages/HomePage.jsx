@@ -37,7 +37,7 @@ function HomePage() {
             key={index}
             src={image}
             alt={`Property view ${index + 1}`}
-            className="rounded-lg shadow-md object-cover w-full h-48"
+            className="rounded-lg shadow-md object-cover w-full h-32 sm:h-40 md:h-48 lg:h-56"
           />
         ))}
       </div>
