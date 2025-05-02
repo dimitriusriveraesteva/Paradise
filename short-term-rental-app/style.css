@@ -124,7 +124,7 @@ section p {
 /* Styling for Testimonials */
 #testimonials {
     text-align: center;
-    background: #f0f8ff; /* Light blue background */
+    background: #78b7ee; /* Light blue background */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -143,11 +143,11 @@ section p {
 .testimonial {
     background: #ffffff;
     color: #333;
-    padding: 40px; /* Add more padding */
+    padding: 20px; /* Add more padding */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 200px; /* Increase width */
-    font-size: 1.2rem; /* Further increase font size */
+    font-size: .8rem; /* Reduce font size for a more compact look */
     min-height: auto; /* Remove fixed height */
     word-wrap: break-word; /* Ensure long words wrap */
     overflow: visible; /* Allow content to expand */
@@ -165,7 +165,7 @@ section p {
 #gallery {
     text-align: center;
     padding: 30px;
-    background: #f8f9fa; /* Light gray background */
+    background: #78b7ee; /* Light gray background */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
