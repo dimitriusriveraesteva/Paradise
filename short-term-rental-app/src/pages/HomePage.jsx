@@ -30,77 +30,95 @@ function HomePage() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white">
-      <div className="absolute top-4 left-4 flex space-x-4">
-        <a href="/" className="px-4 py-2 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200">Home</a>
-        <a href="/contact" className="px-4 py-2 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200">Contact Us</a>
-      </div>
-      <h1 className="text-5xl font-bold mb-6">Welcome to Paradise Luxe Homes</h1>
-      <p className="text-xl mb-8 text-center max-w-2xl">
-        Experience luxury and comfort in our exclusive short-term rental property. Escape to your tropical paradise today!
-      </p>
-      <p className="text-lg mb-4 text-center max-w-2xl">
-        Escape to this beautifully renovated coastal retreat—just 10 minutes from Caspersen and Venice Beach, and only 30 minutes from world-famous Siesta Key Beach! Explore Shamrock Park’s trails, golf, bike, or fish with gear and bikes provided. Unwind at home with a fully stocked kitchen and grill, or discover Venice’s boutiques, galleries, and theaters. State parks and Sarasota gems like the Ringling Museum and Mote Aquarium are a short drive away. Beach gear and towels included!
-      </p>
-      <p className="text-lg mb-4 text-center max-w-2xl">
-        <strong>Main Features:</strong> Private backyard, smart TV w/ streaming services, beach chairs/towels/umbrella, beach wagon, fishing rods, shark tooth hunting gear, bicycles, ceiling fans, walk-in closets, dining table.
-      </p>
-      <p className="text-lg mb-4 text-center max-w-2xl">
-        <strong>Kitchen:</strong> Dishwasher, refrigerator, stove/oven, microwave, toaster, cookware, dual coffee maker, blender, ice maker, water filter, trash bags + paper towels, complimentary spices, garbage disposal.
-      </p>
-      <p className="text-lg mb-4 text-center max-w-2xl">
-        <strong>General:</strong> Free Wi-Fi, iron board, linens/towels, complimentary toiletries (shampoo, conditioner, body soap, lotion, hand soap, etc.), laundry detergent, hair dryer, hangers, keyless entry.
-      </p>
-      <p className="text-lg mb-4 text-center max-w-2xl">
-        <strong>Parking:</strong> 1 car garage with space for up to 2 additional vehicles in driveway.
-      </p>
-      <p className="text-lg mb-4 text-center max-w-2xl">
-        <strong>FAQ:</strong> 1 exterior facing camera (facing out).
-      </p>
-      <p className="text-lg mb-4 text-center max-w-2xl">
-        <strong>Bedrooms:</strong>
-        <ul className="list-disc list-inside">
-          <li>Bedroom 1: King Bed</li>
-          <li>Bedroom 2: Queen Bed</li>
-          <li>Bonus Room/Sunroom: Full Sleeper Sofa</li>
-          <li>Living Room: Queen Sleeper Sofa</li>
-        </ul>
-      </p>
-      <p className="text-lg mb-4 text-center max-w-2xl">
-        <strong>Additional Info:</strong> Washer & Dryer, Central A/C, Outdoor BBQ Grill, Close to Golf Courses, Beaches & Shamrock Park & Nature Center. <strong>SMOKE FREE HOUSE</strong>
-      </p>
-      <div className="relative w-full max-w-xl h-48 overflow-hidden rounded-lg shadow-lg">
-        <img
-          src={images[currentIndex]}
-          alt={`Property view ${currentIndex + 1}`}
-          className="w-full h-full object-cover"
-        />
-        <button
-          onClick={handlePrev}
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-blue-600 font-bold px-4 py-2 rounded-full shadow-md hover:bg-gray-200"
+    <>
+      <header className="w-full bg-white shadow-md fixed top-0 z-10">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+          <div className="text-xl font-bold text-blue-600">Paradise Luxe Homes</div>
+          <div className="space-x-4">
+            <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>
+            <a href="/property" className="text-gray-700 hover:text-blue-600">Property Details</a>
+            <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact Us</a>
+          </div>
+        </nav>
+      </header>
+      <div className="pt-16">
+        <div
+          className="flex flex-col items-center justify-center min-h-screen text-white bg-cover bg-center"
+          style={{ backgroundImage: 'url(../assets/C-2.JPG)' }}
         >
-          &#8249;
-        </button>
-        <button
-          onClick={handleNext}
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-blue-600 font-bold px-4 py-2 rounded-full shadow-md hover:bg-gray-200"
-        >
-          &#8250;
-        </button>
+          <h1 className="text-5xl font-bold mb-6 bg-black bg-opacity-50 px-4 py-2 rounded-lg">
+            Welcome to Paradise Luxe Homes
+          </h1>
+          <p className="text-xl mb-8 text-center max-w-2xl bg-black bg-opacity-50 px-4 py-2 rounded-lg">
+            Experience luxury and comfort in our exclusive short-term rental property. Escape to your tropical paradise today!
+          </p>
+          <a
+            href="/property"
+            className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700"
+          >
+            View Property Details
+          </a>
+        </div>
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white">
+          <div className="relative w-full max-w-xl h-48 overflow-hidden rounded-lg shadow-lg">
+            <img
+              src={images[currentIndex]}
+              alt={`Property view ${currentIndex + 1}`}
+              className="w-full h-full object-cover"
+            />
+            <button
+              onClick={handlePrev}
+              className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-blue-600 font-bold px-4 py-2 rounded-full shadow-md hover:bg-gray-200"
+            >
+              &#8249;
+            </button>
+            <button
+              onClick={handleNext}
+              className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-blue-600 font-bold px-4 py-2 rounded-full shadow-md hover:bg-gray-200"
+            >
+              &#8250;
+            </button>
+          </div>
+          <a href="/property" className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200 mt-8">
+            View Property Details
+          </a>
+          <div className="w-full max-w-4xl mt-8 flex justify-center">
+            <iframe
+              id="booking-iframe"
+              sandbox="allow-top-navigation allow-scripts allow-same-origin"
+              style={{ width: '100%', height: '900px' }}
+              frameBorder="0"
+              src="https://booking.hospitable.com/widget/fd7f5f40-7ea7-460f-869c-9f830039b194/1261776"
+            ></iframe>
+          </div>
+        </div>
+        <section className="bg-gray-100 py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Property Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="p-6 bg-white rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-4">Main Features</h3>
+                <p>Private backyard, smart TV w/ streaming services, beach chairs/towels/umbrella, beach wagon, fishing rods, shark tooth hunting gear, bicycles, ceiling fans, walk-in closets, dining table.</p>
+              </div>
+              <div className="p-6 bg-white rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-4">Kitchen</h3>
+                <p>Dishwasher, refrigerator, stove/oven, microwave, toaster, cookware, dual coffee maker, blender, ice maker, water filter, trash bags + paper towels, complimentary spices, garbage disposal.</p>
+              </div>
+              <div className="p-6 bg-white rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-4">General</h3>
+                <p>Free Wi-Fi, iron board, linens/towels, complimentary toiletries, laundry detergent, hair dryer, hangers, keyless entry.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer className="bg-gray-800 py-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <p>&copy; 2025 Paradise Luxe Homes. All rights reserved.</p>
+            <p>Follow us on <a href="#" className="text-blue-400 hover:underline">Instagram</a> and <a href="#" className="text-blue-400 hover:underline">Facebook</a>.</p>
+          </div>
+        </footer>
       </div>
-      <a href="/property" className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200 mt-8">
-        View Property Details
-      </a>
-      <div className="w-full max-w-4xl mt-8 flex justify-center">
-        <iframe
-          id="booking-iframe"
-          sandbox="allow-top-navigation allow-scripts allow-same-origin"
-          style={{ width: '100%', height: '900px' }}
-          frameBorder="0"
-          src="https://booking.hospitable.com/widget/fd7f5f40-7ea7-460f-869c-9f830039b194/1261776"
-        ></iframe>
-      </div>
-    </div>
+    </>
   );
 }
 
