@@ -16,6 +16,7 @@ import C21 from '../assets/C-21.JPG';
 import C22 from '../assets/C-22.JPG';
 import C23 from '../assets/C-23.JPG';
 import C25 from '../assets/C-25.jpg';
+import HeroImg from '../assets/C-2.JPG';
 
 function HomePage() {
   const images = [C2, C4, C05, C06, C07, C08, C09, C10, C11, C13, C15, C18, C19, C21, C22, C23, C25];
@@ -44,7 +45,7 @@ function HomePage() {
       <div className="pt-16">
         <div
           className="flex flex-col items-center justify-center min-h-screen text-white bg-cover bg-center px-4"
-          style={{ backgroundImage: 'url(../assets/C-2.JPG)' }}
+          style={{ backgroundImage: `url(${HeroImg})` }}
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-black bg-opacity-50 px-4 py-2 rounded-lg text-center">
             Welcome to Paradise Luxe Homes
