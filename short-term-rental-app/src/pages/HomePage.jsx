@@ -1,53 +1,15 @@
-import { useState } from 'react';
-import C2 from '../assets/C-2.JPG';
-import C4 from '../assets/C-4.JPG';
-import C05 from '../assets/C-05.JPG';
-import C06 from '../assets/C-06.JPG';
-import C07 from '../assets/C-07.JPG';
-import C08 from '../assets/C-08.JPG';
-import C09 from '../assets/C-09.JPG';
-import C10 from '../assets/C-10.JPG';
-import C11 from '../assets/C-11.JPG';
-import C13 from '../assets/C-13.JPG';
-import C15 from '../assets/C-15.JPG';
-import C18 from '../assets/C-18.JPG';
-import C19 from '../assets/C-19.JPG';
-import C21 from '../assets/C-21.JPG';
-import C22 from '../assets/C-22.JPG';
-import C23 from '../assets/C-23.JPG';
-import C25 from '../assets/C-25.jpg';
-import HeroImg from '../assets/C-2.JPG';
+import Navbar from './Navbar';
 
 function HomePage() {
-  const images = [C2, C4, C05, C06, C07, C08, C09, C10, C11, C13, C15, C18, C19, C21, C22, C23, C25];
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
-
   return (
     <>
-      <header className="w-full bg-white shadow-md fixed top-0 z-10">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-          <div className="text-xl font-bold text-blue-600">Paradise Luxe Homes</div>
-          <div className="space-x-4">
-            <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>
-            <a href="/property" className="text-gray-700 hover:text-blue-600">Property Details</a>
-            <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact Us</a>
-          </div>
-        </nav>
-      </header>
+      <Navbar />
       <div className="pt-16">
-        <div className="relative flex items-center justify-center h-screen bg-gray-800">
+        <section className="relative flex items-center justify-center h-screen bg-gray-800 text-white">
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="relative z-10 text-center text-white px-4">
-            <h1 className="text-5xl font-extrabold mb-4 drop-shadow-lg">Paradise Luxe Homes</h1>
-            <p className="text-xl mb-6 max-w-xl mx-auto">
+          <div className="relative z-10 text-center px-4">
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">Welcome to Paradise Luxe Homes</h1>
+            <p className="text-lg md:text-xl mb-6 max-w-xl mx-auto">
               Your private tropical escape with luxurious amenities and unforgettable comfort.
             </p>
             <div className="space-x-4">
@@ -55,8 +17,8 @@ function HomePage() {
               <a href="https://booking.hospitable.com/widget/fd7f5f40-7ea7-460f-869c-9f830039b194/1261776" target="_blank" rel="noreferrer" className="px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">Book Now</a>
             </div>
           </div>
-        </div>
-        <section className="bg-gray-100 py-12">
+        </section>
+        <section id="features" className="bg-gray-100 py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Property Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
