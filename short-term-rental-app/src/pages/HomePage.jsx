@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import C2 from '../assets/C-2.JPG';
 import C4 from '../assets/C-4.JPG';
 import C05 from '../assets/C-05.JPG';
@@ -18,6 +19,15 @@ import C25 from '../assets/C-25.jpg';
 
 function HomePage() {
   const images = [C2, C4, C05, C06, C07, C08, C09, C10, C11, C13, C15, C18, C19, C21, C22, C23, C25];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white">
@@ -29,25 +39,24 @@ function HomePage() {
       <p className="text-xl mb-8 text-center max-w-2xl">
         Experience luxury and comfort in our exclusive short-term rental property. Escape to your tropical paradise today!
       </p>
-      <p className="text-lg mb-4 text-center max-w-2xl">
-        Our property offers a serene escape with breathtaking views, modern amenities, and a touch of tropical paradise. Perfect for families, couples, or solo travelers looking for a luxurious getaway.
-      </p>
-      <p className="text-lg mb-8 text-center max-w-2xl">
-        Located just minutes away from pristine beaches, local attractions, and fine dining, Paradise Luxe Homes is your ideal vacation destination.
-      </p>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
-        {images.map((image, index) => (
-          <div key={index} className="relative group">
-            <img
-              src={image}
-              alt={`Property view ${index + 1}`}
-              className="rounded-lg shadow-md object-cover w-full h-32 sm:h-40 md:h-48 lg:h-56 transition-transform duration-300 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-              <p className="text-white text-sm font-semibold">View {`Image ${index + 1}`}</p>
-            </div>
-          </div>
-        ))}
+      <div className="relative w-full max-w-3xl h-64 overflow-hidden rounded-lg shadow-lg">
+        <img
+          src={images[currentIndex]}
+          alt={`Property view ${currentIndex + 1}`}
+          className="w-full h-full object-cover"
+        />
+        <button
+          onClick={handlePrev}
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-blue-600 font-bold px-4 py-2 rounded-full shadow-md hover:bg-gray-200"
+        >
+          &#8249;
+        </button>
+        <button
+          onClick={handleNext}
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-blue-600 font-bold px-4 py-2 rounded-full shadow-md hover:bg-gray-200"
+        >
+          &#8250;
+        </button>
       </div>
       <a href="/property" className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200 mt-8">
         View Property Details
