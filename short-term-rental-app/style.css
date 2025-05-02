@@ -263,3 +263,28 @@ section p {
 .cta-button:hover {
     background: #5A9BD5;
 }
+
+/* Booking Widget Section */
+/* Center the booking widget on the page */
+.booking-widget {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 15px auto; /* Center the widget with auto margins */
+    padding: 0px;
+    padding-right: 90px; /* Reduce padding on the right */
+    padding-left: 90px; /* Reduce padding on the left */
+    padding-top: 50px; /* Reduce padding on the top */
+    background-color: #f0f8ff; /* Light background for visibility */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Set a width to ensure proper centering */
+    position: relative; /* Enable positioning */
+    left: 0px; /* Move the widget to the left */
+}
+
+#booking-iframe {
+    width: 80%;
+    height: 700px;
+    border: none;
+}
