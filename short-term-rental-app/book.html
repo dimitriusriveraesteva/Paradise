@@ -16,20 +16,9 @@
     </header>
 
     <main>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="dates">Preferred Dates:</label>
-            <input type="text" id="dates" name="dates" required>
-
-            <label for="guests">Number of Guests:</label>
-            <input type="number" id="guests" name="guests" min="1" required>
-
-            <input type="submit" value="Request Booking">
-        </form>
-
-        <iframe id="booking-iframe" sandbox="allow-top-navigation allow-scripts allow-same-origin" style="width: 100%; height: 900px" frameborder="0" src="https://booking.hospitable.com/widget/fd7f5f40-7ea7-460f-869c-9f830039b194/1261776"></iframe>
+        <div style="display: flex; justify-content: flex-start; align-items: center; margin-top: 50px; padding-left: 2.5in;">
+            <iframe id="booking-iframe" sandbox="allow-top-navigation allow-scripts allow-same-origin" style="width: 80%; height: 900px; border: none;" src="https://booking.hospitable.com/widget/fd7f5f40-7ea7-460f-869c-9f830039b194/1261776"></iframe>
+        </div>
     </main>
 
     <footer>
