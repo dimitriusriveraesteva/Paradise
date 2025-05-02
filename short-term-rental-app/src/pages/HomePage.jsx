@@ -43,24 +43,32 @@ function HomePage() {
       </header>
       <div className="pt-16">
         <div
-          className="flex flex-col items-center justify-center min-h-screen text-white bg-cover bg-center"
+          className="flex flex-col items-center justify-center min-h-screen text-white bg-cover bg-center px-4"
           style={{ backgroundImage: 'url(../assets/C-2.JPG)' }}
         >
-          <h1 className="text-5xl font-bold mb-6 bg-black bg-opacity-50 px-4 py-2 rounded-lg">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-black bg-opacity-50 px-4 py-2 rounded-lg text-center">
             Welcome to Paradise Luxe Homes
           </h1>
-          <p className="text-xl mb-8 text-center max-w-2xl bg-black bg-opacity-50 px-4 py-2 rounded-lg">
+          <p className="text-lg md:text-xl mb-6 text-center max-w-3xl bg-black bg-opacity-50 px-4 py-2 rounded-lg">
             Experience luxury and comfort in our exclusive short-term rental property. Escape to your tropical paradise today!
           </p>
-          <a
-            href="/property"
-            className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700"
-          >
-            View Property Details
-          </a>
+          <div className="flex space-x-4">
+            <a
+              href="/property"
+              className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700"
+            >
+              View Property Details
+            </a>
+            <a
+              href="https://booking.hospitable.com/widget/fd7f5f40-7ea7-460f-869c-9f830039b194/1261776"
+              className="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700"
+            >
+              Book Now
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white">
-          <div className="relative w-full max-w-xl h-48 overflow-hidden rounded-lg shadow-lg">
+        <div className="flex flex-col items-center justify-center py-12 bg-gray-100">
+          <div className="relative w-full max-w-2xl h-56 overflow-hidden rounded-lg shadow-lg">
             <img
               src={images[currentIndex]}
               alt={`Property view ${currentIndex + 1}`}
@@ -68,28 +76,16 @@ function HomePage() {
             />
             <button
               onClick={handlePrev}
-              className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-blue-600 font-bold px-4 py-2 rounded-full shadow-md hover:bg-gray-200"
+              className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-blue-600 font-bold px-3 py-2 rounded-full shadow-md hover:bg-gray-200"
             >
               &#8249;
             </button>
             <button
               onClick={handleNext}
-              className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-blue-600 font-bold px-4 py-2 rounded-full shadow-md hover:bg-gray-200"
+              className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-blue-600 font-bold px-3 py-2 rounded-full shadow-md hover:bg-gray-200"
             >
               &#8250;
             </button>
-          </div>
-          <a href="/property" className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200 mt-8">
-            View Property Details
-          </a>
-          <div className="w-full max-w-4xl mt-8 flex justify-center">
-            <iframe
-              id="booking-iframe"
-              sandbox="allow-top-navigation allow-scripts allow-same-origin"
-              style={{ width: '100%', height: '900px' }}
-              frameBorder="0"
-              src="https://booking.hospitable.com/widget/fd7f5f40-7ea7-460f-869c-9f830039b194/1261776"
-            ></iframe>
           </div>
         </div>
         <section className="bg-gray-100 py-12">
