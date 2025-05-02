@@ -156,13 +156,14 @@ section p {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Increase the margin below the testimonial section */
 }
 
 .testimonial-carousel {
     display: flex;
     overflow: visible; /* Allow boxes to extend beyond the container */
     justify-content: space-between; /* Distribute boxes evenly */
-    padding: 0 20px; /* Add padding to prevent cutting off */
+    padding: 20px 20px; /* Add padding to prevent cutting off */
     gap: 20px;
     animation: slide 10s infinite;
 }
@@ -179,6 +180,7 @@ section p {
     min-height: auto; /* Remove fixed height */
     word-wrap: break-word; /* Ensure long words wrap */
     overflow: visible; /* Allow content to expand */
+    font-weight: bold; /* Bolden the testimonial text */
 }
 
 /* Update testimonial animation to sway left, center, and right */
@@ -192,7 +194,7 @@ section p {
 /* Styling for Gallery */
 #gallery {
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     background: #78b7ee; /* Light gray background */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -228,6 +230,7 @@ section p {
     text-align: center;
     padding: 30px 80px; /* Reduce top and bottom padding */
     padding-top: 0px; /* Reduce top padding to move the hero-title up */
+    margin-bottom: 0px; /* Add margin to ensure the hero section does not overlap with the footer */
 }
 
 /* HERO Title Styling */
@@ -287,4 +290,66 @@ section p {
     width: 80%;
     height: 700px;
     border: none;
+}
+
+/* Refine Contact Us Page Styling for consistency */
+#contact-hero {
+    background: url('images/contact-hero.jpg') no-repeat center center; /* Ensure consistent hero background */
+    background-size: cover;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 10px; /* Match padding with other hero sections */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#contact-info, #contact-form, #social-media {
+    margin: 20px; /* Ensure consistent spacing */
+    padding: 30px; /* Match padding with other sections */
+    background: #78b7ee; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Match width with other sections */
+}
+
+#contact-info, #contact-form {
+    color: #ffffff; /* Change font color to light blue to match the theme */
+}
+
+#contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact-info li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 15px; /* Match input padding with other forms */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form button {
+    background: #4682B4;
+    color: #FFFFFF;
+    padding: 15px 20px; /* Match button padding with other buttons */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contact-form button:hover {
+    background: #5A9BD5;
 }
