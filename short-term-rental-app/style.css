@@ -11,16 +11,30 @@ header {
     background: #1b4161; /* Steel Blue */
     color: #FFFFFF;
     padding: 20px;
+    padding-top: 10px; /* Reduce top padding */
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Header Title Styling */
+/* Update header-title styles with additional padding and font */
 .header-title {
     font-size: 1.2rem; /* Further reduce font size */
     text-align: left;
-    padding-left: 20px; /* Add padding for spacing */
+    padding-left: 10px; /* Add padding for spacing */
+    padding-top: 0px; /* Add padding to the top for spacing */
+    padding-bottom: 0px; /* Add padding to the bottom for spacing */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font for the title */
     color: #FFFFFF;
+}
+
+/* Move navigation links to the right of the header */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align links to the right */
+    gap: 15px; /* Add spacing between links */
+    margin-right: 20px; /* Add margin to the right for spacing */
+    align-items: center; /* Vertically align links with the header-title */
+    margin-top: -35px; /* Further adjust margin to move links up */
 }
 
 nav a {
@@ -184,35 +198,36 @@ section p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Make the gallery scrollable */
+/* Revert gallery to previous scrollable style */
 .gallery-grid {
     display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 10px;
-    scroll-behavior: smooth;
+    overflow-x: auto; /* Restore horizontal scrolling */
+    gap: 20px; /* Restore spacing between images */
+    padding: 10px; /* Restore padding */
+    scroll-behavior: smooth; /* Restore smooth scrolling */
 }
 
 .gallery-grid img {
-    flex-shrink: 0;
-    width: 300px;
-    height: 200px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    flex-shrink: 0; /* Restore fixed size for images */
+    width: 300px; /* Restore image width */
+    height: 200px; /* Restore image height */
+    border-radius: 10px; /* Restore rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Restore shadow */
+    transition: transform 0.3s ease; /* Restore hover effect */
 }
 
 .gallery-grid img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Restore zoom on hover */
 }
 
 /* HERO Section Styling */
 #hero {
-    background: url('https://via.placeholder.com/1920x600?text=Beach+Paradise') no-repeat center center;
-    background-size: cover;
+    background: url('images/hero-background.jpg') no-repeat center center; /* Use a background image */
+    background-size: cover; /* Ensure the image covers the entire section */
     color: #FFFFFF;
     text-align: center;
-    padding: 100px 20px; /* Reduce top and bottom padding */
+    padding: 30px 80px; /* Reduce top and bottom padding */
+    padding-top: 0px; /* Reduce top padding to move the hero-title up */
 }
 
 /* HERO Title Styling */
