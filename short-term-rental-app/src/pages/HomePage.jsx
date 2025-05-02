@@ -39,7 +39,7 @@ function HomePage() {
       <p className="text-xl mb-8 text-center max-w-2xl">
         Experience luxury and comfort in our exclusive short-term rental property. Escape to your tropical paradise today!
       </p>
-      <div className="relative w-full max-w-3xl h-64 overflow-hidden rounded-lg shadow-lg">
+      <div className="relative w-full max-w-xl h-48 overflow-hidden rounded-lg shadow-lg">
         <img
           src={images[currentIndex]}
           alt={`Property view ${currentIndex + 1}`}
