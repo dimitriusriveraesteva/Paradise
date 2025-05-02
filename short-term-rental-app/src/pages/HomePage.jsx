@@ -61,7 +61,7 @@ function HomePage() {
       <a href="/property" className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200 mt-8">
         View Property Details
       </a>
-      <div className="w-full max-w-4xl mt-8">
+      <div className="w-full max-w-4xl mt-8 flex justify-center">
         <iframe
           id="booking-iframe"
           sandbox="allow-top-navigation allow-scripts allow-same-origin"
