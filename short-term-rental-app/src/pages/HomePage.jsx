@@ -61,6 +61,15 @@ function HomePage() {
       <a href="/property" className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200 mt-8">
         View Property Details
       </a>
+      <div className="w-full max-w-4xl mt-8">
+        <iframe
+          id="booking-iframe"
+          sandbox="allow-top-navigation allow-scripts allow-same-origin"
+          style={{ width: '100%', height: '900px' }}
+          frameBorder="0"
+          src="https://booking.hospitable.com/widget/fd7f5f40-7ea7-460f-869c-9f830039b194/1261776"
+        ></iframe>
+      </div>
     </div>
   );
 }
