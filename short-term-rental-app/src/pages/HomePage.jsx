@@ -61,6 +61,8 @@ function HomePage() {
             </a>
             <a
               href="https://booking.hospitable.com/widget/fd7f5f40-7ea7-460f-869c-9f830039b194/1261776"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700"
             >
               Book Now
