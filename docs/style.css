@@ -97,24 +97,26 @@ footer {
 /* Add responsive design */
 @media (max-width: 768px) {
     header {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         text-align: center;
         padding: 1rem;
     }
 
     .header-title {
         font-size: 1rem;
-        padding: 0;
+        margin-bottom: 10px;
     }
 
     nav {
+        display: flex;
         flex-direction: column;
         gap: 10px;
-        margin: 0;
     }
 
     nav a {
-        margin: 0.5rem 0;
+        font-size: 1rem;
     }
 
     main {
@@ -158,22 +160,15 @@ footer {
 /* Add responsive design for smaller screens */
 @media (max-width: 480px) {
     header {
-        flex-direction: column;
-        text-align: center;
+        padding: 0.5rem;
     }
 
     .header-title {
-        font-size: 0.8rem;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 10px;
-        margin: 0;
+        font-size: 0.9rem;
     }
 
     nav a {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     main {
