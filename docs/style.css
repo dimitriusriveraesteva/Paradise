@@ -6,6 +6,7 @@ body {
     background: linear-gradient(to bottom, #add8e6, #FFFFFF); /* Lighter blue gradient */
     color: #1d1b1b; /* Darker text for better contrast */
     font-size: 1rem; /* Base font size */
+    overflow-y: hidden; /* Prevent scrolling */
 }
 
 header {
@@ -60,20 +61,26 @@ nav {
 }
 
 main {
-    padding: 20px;
+    padding: 10px; /* Reduce padding */
     background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
+    border-radius: 0px;
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
     max-width: 800px;
+    max-height: 900px; /* Fit content within the viewport */
+    overflow: hidden; /* Prevent scrolling within main */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute sections evenly */
     color: #110b61; /* Ensure text is visible on white background */
+    gap: 0; /* Ensure no gaps between flex items */
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
+    gap: 0px;
+    max-width: 200px;
 }
 
 .carousel {
@@ -92,13 +99,13 @@ form {
 }
 
 footer {
+    position: fixed; /* Ensure footer stays at the bottom */
+    bottom: 0;
+    width: 100%;
     background: #4682B4; /* Steel Blue */
     color: #FFFFFF;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -222,20 +229,15 @@ footer {
     }
 }
 
-/* Revert background color of the 'Your Home Away From Home' section */
-section {
-    background: #78b7ee; /* Restore original white background */
+/* Section: Your Home Away From Home */
+#your-home-section {
+    background: #78b7ee; /* Light blue background */
     color: #ffffff; /* Ensure text is visible */
-    padding: 50px 20px;
+    padding: 30px 0; /* Add minimal padding for spacing */
     border-radius: 10px;
-    margin-top: 20px; /* Reduce top margin */
-    margin-bottom: 20px;
+    margin: 0; /* Remove all margins */
     text-align: center;
-}
-
-section h2 {
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Enhance readability */
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for emphasis */
 }
 
 /* Apply Montserrat font to titled areas */
@@ -243,19 +245,26 @@ h1, h2 {
     font-family: 'Montserrat', sans-serif;
 }
 
-section p {
-    font-size: 1.2rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Enhance readability */
+/* Section: Gallery */
+#gallery {
+    text-align: center;
+    color: #ffffff; /* Ensure text is visible */
+    padding: 20px 0; /* Add minimal padding for spacing */
+    background: #78b7ee; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Remove all margins */
 }
 
-/* Styling for Testimonials */
+/* Section: What Our Guests Say */
 #testimonials {
     text-align: center;
+    color: #ffffff; /* Ensure text is visible */
     background: #78b7ee; /* Light blue background */
-    padding: 30px;
+    margin: 0; /* Remove all margins */
+    padding: 20px 0; /* Add minimal padding for spacing */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px; /* Increase the margin below the testimonial section */
 }
 
 .testimonial-carousel {
@@ -290,15 +299,6 @@ section p {
     100% { transform: translateX(0); }
 }
 
-/* Styling for Gallery */
-#gallery {
-    text-align: center;
-    padding: 20px;
-    background: #78b7ee; /* Light gray background */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 /* Fix for gallery scrollability on mobile */
 .gallery-grid {
     display: flex;
@@ -320,49 +320,54 @@ section p {
     transform: scale(1.05); /* Restore zoom on hover */
 }
 
-/* HERO Section Styling */
+/* Consolidate and standardize the #hero section styling */
 #hero {
     background: url('images/hero-background.jpg') no-repeat center center; /* Use a background image */
     background-size: cover; /* Ensure the image covers the entire section */
     color: #FFFFFF;
     text-align: center;
-    padding: 30px 80px; /* Reduce top and bottom padding */
-    padding-top: 0px; /* Reduce top padding to move the hero-title up */
-    margin-bottom: 0px; /* Add margin to ensure the hero section does not overlap with the footer */
+    margin-top: 0px; /* Move the hero section up */
+    padding: 20px 0; /* Adjust padding for consistency */
+    margin-bottom: 20px; /* Add space below the hero section to separate it from the next section */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for emphasis */
+    border-radius: 10px; /* Add rounded corners for a modern look */
 }
 
-/* HERO Title Styling */
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 2.75rem;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     color: #FFFFFF;
+    margin-bottom: 10px;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 2.75rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px; /* Remove top margin */
 }
 
 .hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    font-size: 1.35rem;
+    margin-bottom: 25px;
+    margin-top: 5px; /* Remove top margin */
 }
 
 .cta-button {
     background: #4682B4;
     color: #FFFFFF;
-    padding: 15px 30px;
+    padding: 15px 20px;
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 5px;
     transition: background 0.3s ease;
     font-weight: bold; /* Add bold styling to the button text */
+    margin-bottom: 10px; /* Add margin to the bottom of the button */
 }
 
 .cta-button:hover {
-    background: #5A9BD5;
+    background: #FFD700; /* Match the gold color of navigation links */
 }
 
 /* Booking Widget Section */
@@ -463,4 +468,10 @@ img {
     width: 100%;
     max-width: 1200px;
     padding: 0 16px;
+}
+
+/* Adjust spacing between sections */
+section {
+    margin-top: 0px; /* Reduce top margin */
+    margin-bottom: 0px; /* Reduce bottom margin */
 }
