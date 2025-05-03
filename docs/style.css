@@ -5,6 +5,7 @@ body {
     padding: 0;
     background: linear-gradient(to bottom, #add8e6, #FFFFFF); /* Lighter blue gradient */
     color: #1d1b1b; /* Darker text for better contrast */
+    font-size: 1rem; /* Base font size */
 }
 
 header {
@@ -121,6 +122,16 @@ footer {
 
     footer {
         font-size: 0.9rem;
+    }
+
+    .nav, .hero, .columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
 
@@ -392,4 +403,17 @@ section p {
 
 #contact-form button:hover {
     background: #5A9BD5;
+}
+
+/* Ensure images scale within their containers */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Use relative units for layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 16px;
 }
