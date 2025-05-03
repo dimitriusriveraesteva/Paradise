@@ -6,7 +6,7 @@ body {
     background: linear-gradient(to bottom, #add8e6, #FFFFFF); /* Lighter blue gradient */
     color: #1d1b1b; /* Darker text for better contrast */
     font-size: 1rem; /* Base font size */
-    overflow-y: hidden; /* Prevent scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 header {
@@ -67,8 +67,8 @@ main {
     box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
     max-width: 800px;
-    max-height: 900px; /* Fit content within the viewport */
-    overflow: hidden; /* Prevent scrolling within main */
+    max-height: none; /* Remove height restriction */
+    overflow: visible; /* Allow content to extend and scroll */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Distribute sections evenly */
