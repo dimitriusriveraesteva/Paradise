@@ -355,3 +355,29 @@ section {
     margin-top: 0px; /* Reduce top margin */
     margin-bottom: 0px; /* Reduce bottom margin */
 }
+
+/* Reintroduce mobile-specific styles for the header */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .header-title {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-nav-link {
+        font-size: 1rem;
+    }
+}
