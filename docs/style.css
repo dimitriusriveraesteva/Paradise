@@ -389,6 +389,7 @@ section {
         gap: 10px;
         padding: 10px;
         scroll-behavior: smooth;
+        white-space: nowrap; /* Prevent wrapping */
     }
 
     .gallery-grid img {
@@ -407,6 +408,7 @@ section {
         gap: 20px;
         padding: 10px;
         scroll-behavior: smooth;
+        white-space: nowrap; /* Prevent wrapping */
     }
 
     .testimonial {
