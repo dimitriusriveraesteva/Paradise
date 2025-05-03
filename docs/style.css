@@ -287,22 +287,21 @@ section p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Revert gallery to previous scrollable style */
+/* Fix for gallery scrollability on mobile */
 .gallery-grid {
     display: flex;
-    overflow-x: auto; /* Restore horizontal scrolling */
-    gap: 20px; /* Restore spacing between images */
-    padding: 10px; /* Restore padding */
-    scroll-behavior: smooth; /* Restore smooth scrolling */
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    scroll-behavior: smooth;
 }
 
 .gallery-grid img {
-    flex-shrink: 0; /* Restore fixed size for images */
-    width: 300px; /* Restore image width */
-    height: 200px; /* Restore image height */
-    border-radius: 10px; /* Restore rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Restore shadow */
-    transition: transform 0.3s ease; /* Restore hover effect */
+    flex-shrink: 0;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-grid img:hover {
