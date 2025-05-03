@@ -123,6 +123,45 @@ footer {
     }
 }
 
+/* Add responsive design for smaller screens */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-title {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+    }
+
+    main {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .gallery-grid img {
+        width: 100%;
+        height: auto;
+    }
+
+    #testimonials .testimonial {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+}
+
 /* Revert background color of the 'Your Home Away From Home' section */
 section {
     background: #78b7ee; /* Restore original white background */
