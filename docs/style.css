@@ -10,25 +10,25 @@ body {
 
 header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     background: #1b4161; /* Steel Blue */
     color: #FFFFFF;
     padding: 20px;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header-title {
     font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 10px;
-    text-align: center;
+    margin: 0;
+    text-align: left;
 }
 
 nav {
     display: flex;
-    justify-content: center;
     gap: 15px;
 }
 
