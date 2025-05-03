@@ -380,4 +380,22 @@ section {
     .header-nav-link {
         font-size: 1rem;
     }
+
+    /* Fix gallery pictures to enable horizontal scrolling on mobile */
+    .gallery-grid {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px;
+        scroll-behavior: smooth;
+    }
+
+    .gallery-grid img {
+        flex-shrink: 0;
+        width: auto;
+        height: 150px; /* Adjust height for better visibility */
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 }
